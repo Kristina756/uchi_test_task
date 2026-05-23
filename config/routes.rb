@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :students, only: [ :create, :destroy ]
+  post "/students", to: "students#create"
+  delete "/students/:user_id", to: "students#destroy"
 
-
-  resources :schools do
+  resources :schools, only: [] do
     resources :classes, only: [ :index ] do
       resources :students, only: [ :index ]
     end
