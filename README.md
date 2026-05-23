@@ -1,24 +1,24 @@
-# README
+# Тестовое задание для стажировки в Учи.ру
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Сервис для управления списком студентов и классов. Реализован на Ruby on Rails и PostgreSQL.
 
-Things you may want to cover:
+## Технологии
+- Ruby 3.3
+- Rails 8.1
+- PostgreSQL 15
+- Docker / Docker Compose
 
-* Ruby version
+## Как запустить проект локально
 
-* System dependencies
+Для запуска проекта вам понадобится установленный Docker.
 
-* Configuration
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/Kristina756/uchi_test_task.git
+   cd uchi_test_task
+2. Запустите проект через Docker Compose:
+   docker compose up --build
+3. Инициализируйте базу данных (выполните в другом терминале):
+   docker compose run web bin/rails db:prepare
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Сервис будет доступен по адресу: http://localhost:3000
