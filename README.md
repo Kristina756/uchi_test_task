@@ -21,3 +21,14 @@
    docker compose run web bin/rails db:prepare
 
 Сервис будет доступен по адресу: http://localhost:3000
+
+Для создания студента используйте POST-запрос на `/students` с JSON телом:
+{
+  "student": {
+    "first_name": "Иван",
+    "last_name": "Иванов",
+    "surname": "Иванович",
+    "class_id": 1,
+    "school_id": 1
+  }
+}
